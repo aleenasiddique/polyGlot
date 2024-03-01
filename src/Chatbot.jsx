@@ -2,7 +2,6 @@ import React from "react"
 import OpenAI from "openai"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowUp, faQuestion } from "@fortawesome/free-solid-svg-icons"
-import { process } from "./env" 
 import mapBackground from "./assets/map.png"
 import parrot from "./assets/parrot.png"
 import spanishFlag from './assets/spain.png'
@@ -21,7 +20,7 @@ export default function Chatbot(){
     const scrollRef = React.useRef(null)
 
 
-    const openai = new OpenAI({
+     const openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY,
         dangerouslyAllowBrowser: true 
       }) 
@@ -29,7 +28,7 @@ export default function Chatbot(){
       const messages =[{
         role: 'system',
         content: `You are an expert language translator. You translate the text given in English properly to ${languageInput}`
-    }]
+    }] 
      //scroll to the bottom of the coversation Array to see the new conversation 
      React.useEffect(() => {
         if (scrollRef.current) {
