@@ -67,7 +67,8 @@ export default function Chatbot(){
               },
              body: [...messages, userInputMessage]
               })
-              const data = await response.json()               /*
+              const data = await response.json() 
+              console.log(data)              /*
                 try {
                    /const response =  await openai.chat.completions.create({
                         model: 'gpt-3.5-turbo-0125',
