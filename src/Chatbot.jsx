@@ -69,8 +69,8 @@ export default function Chatbot(){
             
                      
                    
-                   setConversationArray((prevConversation) => [...prevConversation, {type: 'bot', message: response.reply.choices[0].message.content}])
-                const assistantContent = response.reply.choices[0].message
+                   setConversationArray((prevConversation) => [...prevConversation, {type: 'bot', message: data.reply.choices[0].message.content}])
+                const assistantContent = data.reply.choices[0].message
                      messages.push(assistantContent) 
              
                     
