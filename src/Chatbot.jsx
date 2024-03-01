@@ -149,17 +149,17 @@ export default function Chatbot(){
           
           
                 <div className="flex w-full justify-center gap-6">
-            <div className="flex gap-1 ">
+            <div className="flex gap-1 items-center">
             <input type="radio" id="spanishFlag" name="flag" value="Spanish" defaultChecked  onChange={(event) => setLanguageInput(event.target.value)}/>
             <label  className="cursor-pointer" htmlFor="spanishFlag" >
             <img src={spanishFlag} alt="Flag of Spain"/></label>
             </div>
-            <div className="flex gap-1 ">
+            <div className="flex gap-1 items-center">
             <input type="radio" id="japeneseFlag" name="flag" value="Japenese"  onChange={(event) => setLanguageInput(event.target.value)}/>
             <label  className="cursor-pointer" htmlFor="japeneseFlag" >
             <img src={japeneseFlag} alt="Flag of Japan"/></label>
             </div>
-            <div className="flex gap-1 ">
+            <div className="flex gap-1 items-center">
             <input type="radio" id="frenchFlag" name="flag" value="French"  onChange={(event) => setLanguageInput(event.target.value)}/>
             <label  className="cursor-pointer " htmlFor="frenchFlag" >
             <img src={frenchFlag} alt="Flag of France"/></label>
