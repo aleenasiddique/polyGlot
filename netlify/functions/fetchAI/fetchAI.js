@@ -8,15 +8,16 @@ import OpenAI from "openai"
 const handler = async (event) => {
   const messages = JSON.parse(event.body)
   try {
-    /*
+    
     const response =  await openai.chat.completions.create({
       model: 'gpt-3.5-turbo-0125',
-      messages: event.body,  
+      messages: messages,  
       temperature: 0.8
-    }) */    return {
+    }) 
+      return {
       statusCode: 200,
       body: JSON.stringify({
-        reply: messages
+        reply: response.data
       }),
     }
   } catch (error) {
