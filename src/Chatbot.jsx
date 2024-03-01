@@ -136,13 +136,13 @@ export default function Chatbot(){
             <form onSubmit={handleSubmit} className="w-full sticky bottom-0">
                 <div className="flex mt-4 w-[95%] mx-auto">
          <input type="text"  name="question"
-         className={`h-12 w-[80%] border border-zinc-300 py-2 px-4  flex-grow rounded-tl-lg rounded-bl-lg focus:outline-none ${questionInput === '' ? "caret-zinc-300 focus:border-zinc-300" : "caret-sky-600 focus:border-sky-600"}`}
+         className={`h-12 w-[85%] border border-zinc-300 py-2 px-4  flex-grow rounded-tl-lg rounded-bl-lg focus:outline-none ${questionInput === '' ? "caret-zinc-300 focus:border-zinc-300" : "caret-sky-600 focus:border-sky-600"}`}
          value={questionInput}
          onChange={(event) => setQuestionInput(event.target.value)}
          autoComplete="off"
          />
          <button type="submit" name="submitButton"
-         className={`ml-[-1px] h-12 w-[20%] rounded-tr-lg rounded-br-lg text-white ${questionInput === '' ? " bg-zinc-300 " : " bg-sky-600 "}`} disabled={questionInput === ''}>
+         className={`ml-[-2px] h-12 w-[15%] rounded-tr-lg rounded-br-lg text-white ${questionInput === '' ? " bg-zinc-300 " : " bg-sky-600 "}`} disabled={questionInput === ''}>
          <FontAwesomeIcon icon={faArrowUp}/></button>
          </div>
             
