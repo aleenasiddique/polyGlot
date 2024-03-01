@@ -91,7 +91,7 @@ export default function Chatbot(){
     return (
       
         <div className="h-screen  w-screen flex justify-center items-center bg-zinc-100 ">
-        <main className="h-[650px] w-[90%] max-w-[400px] bg-white md:shadow-lg md:shadow-black/10 flex flex-col">
+        <main className="h-[610px] md:h-[650px] w-[90%] max-w-[400px] bg-white md:shadow-lg md:shadow-black/10 flex flex-col">
             <header className="w-full h-40 bg-cover flex justify-center items-center gap-4 px-2" style={{backgroundImage: `url(${mapBackground})`}}>
                   <img src={parrot} alt="parrot" className="h-[70%]"/>
                   <div className=" flex flex-col justify-center  md:gap-1">
@@ -102,7 +102,7 @@ export default function Chatbot(){
            <section className=" border-2 border-zinc-300 m-4 px-4 pt-6 pb-2 rounded-lg flex flex-col flex-1 ">
     
             <div ref={scrollRef}
-            className="h-[230px] md:h-[305px] overflow-y-auto mb-2 px-2">
+            className="h-[300px] md:h-[305px] overflow-y-auto mb-2 px-2">
                {Object.keys(conversationArray).length === 0  &&  <div className="p-2 rounded-lg bg-sky-600 text-white">
                 <p>Select the language you want me to translate into, type your text and hit send!</p>
                 </div> }
@@ -149,17 +149,17 @@ export default function Chatbot(){
           
           
                 <div className="flex w-full justify-center gap-6">
-            <div className="flex gap-1 items-end">
+            <div className="flex gap-1 ">
             <input type="radio" id="spanishFlag" name="flag" value="Spanish" defaultChecked  onChange={(event) => setLanguageInput(event.target.value)}/>
             <label  className="cursor-pointer" htmlFor="spanishFlag" >
             <img src={spanishFlag} alt="Flag of Spain"/></label>
             </div>
-            <div className="flex gap-1 items-end">
+            <div className="flex gap-1 ">
             <input type="radio" id="japeneseFlag" name="flag" value="Japenese"  onChange={(event) => setLanguageInput(event.target.value)}/>
             <label  className="cursor-pointer" htmlFor="japeneseFlag" >
             <img src={japeneseFlag} alt="Flag of Japan"/></label>
             </div>
-            <div className="flex gap-1 items-end">
+            <div className="flex gap-1 ">
             <input type="radio" id="frenchFlag" name="flag" value="French"  onChange={(event) => setLanguageInput(event.target.value)}/>
             <label  className="cursor-pointer " htmlFor="frenchFlag" >
             <img src={frenchFlag} alt="Flag of France"/></label>
