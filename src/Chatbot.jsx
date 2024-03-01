@@ -20,10 +20,10 @@ export default function Chatbot(){
     const scrollRef = React.useRef(null)
 
 
-     const openai = new OpenAI({
+     /*const openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY,
         dangerouslyAllowBrowser: true 
-      }) 
+      })  */
       // Open AI API messages array
       const messages =[{
         role: 'system',
@@ -57,7 +57,17 @@ export default function Chatbot(){
             const fetchTranslation = async  (userInputMessage) => {
                /*
                 setIsLoading(true)
-                setError(null)
+                setError(null) */
+             const url = 'https://poly-glot.netlify.app/.netlify/functions/fetchAI'
+    
+             const response = await fetch(url, {
+             method: 'POST',
+             headers: {
+            'content-type': 'text/plain',
+              },
+             body: [...messages, userInputMessage]
+              })
+              const data = await response.json()               /*
                 try {
                    /const response =  await openai.chat.completions.create({
                         model: 'gpt-3.5-turbo-0125',
