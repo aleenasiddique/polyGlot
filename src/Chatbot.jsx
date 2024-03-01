@@ -102,7 +102,7 @@ export default function Chatbot(){
            <section className=" border-2 border-zinc-300 m-4 px-4 pt-6 pb-2 rounded-lg flex flex-col flex-1 ">
     
             <div ref={scrollRef}
-            className="h-[155px] md:h-[305px] overflow-y-auto mb-2 px-2">
+            className="h-[230px] md:h-[305px] overflow-y-auto mb-2 px-2">
                {Object.keys(conversationArray).length === 0  &&  <div className="p-2 rounded-lg bg-sky-600 text-white">
                 <p>Select the language you want me to translate into, type your text and hit send!</p>
                 </div> }
