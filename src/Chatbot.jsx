@@ -91,7 +91,7 @@ export default function Chatbot(){
     return (
       
         <div className="h-screen  w-screen flex justify-center items-center bg-zinc-100 ">
-        <main className="h-[500px] md:h-[650px] w-[100%] max-w-[400px] bg-white md:shadow-lg md:shadow-black/10 flex flex-col">
+        <main className="h-[500px] md:h-[650px] w-[90%] max-w-[400px] bg-white md:shadow-lg md:shadow-black/10 flex flex-col">
             <header className="w-full h-40 bg-cover flex justify-center items-center gap-4 px-2" style={{backgroundImage: `url(${mapBackground})`}}>
                   <img src={parrot} alt="parrot" className="h-[70%]"/>
                   <div className=" flex flex-col justify-center  md:gap-1">
