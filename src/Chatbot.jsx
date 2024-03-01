@@ -55,13 +55,13 @@ export default function Chatbot(){
                 setIsLoading(true)
                 setError(null) */
              const url = 'https://poly-glot.netlify.app/.netlify/functions/fetchAI'
-    
+             const message = [...messages, userInputMessage]
              const response = await fetch(url, {
              method: 'POST',
              headers: {
             'content-type': 'text/plain',
               },
-             body: [...messages, userInputMessage]
+             body: message, 
               })
               const data = await response.json() 
               console.log(data)              /*
