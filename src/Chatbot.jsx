@@ -55,11 +55,11 @@ export default function Chatbot(){
             //making API call to OpenAI to fetch translation
          
             const fetchTranslation = async  (userInputMessage) => {
-               
+               /*
                 setIsLoading(true)
                 setError(null)
                 try {
-                    const response =  await openai.chat.completions.create({
+                   /const response =  await openai.chat.completions.create({
                         model: 'gpt-3.5-turbo-0125',
                         messages: [...messages, userInputMessage],  
                         temperature: 0.8
@@ -68,14 +68,14 @@ export default function Chatbot(){
                    
                    setConversationArray((prevConversation) => [...prevConversation, {type: 'bot', message: response.choices[0].message.content}])
                 const assistantContent = response.choices[0].message
-                     messages.push(assistantContent)
+                     messages.push(assistantContent)  
                     
                 } catch (error) {
                    
                     setError('Unable to access AI. Please try again')
                 }
                 setIsLoading(false)
-               
+               */
             }
             
 
