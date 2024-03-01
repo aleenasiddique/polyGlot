@@ -59,9 +59,9 @@ export default function Chatbot(){
              const response = await fetch(url, {
              method: 'POST',
              headers: {
-            'content-type': 'text/plain',
+            'content-type': 'application/json',
               },
-             body: message, 
+             body: JSON.stringify(message) 
               })
               const data = await response.json() 
               console.log(data)              /*

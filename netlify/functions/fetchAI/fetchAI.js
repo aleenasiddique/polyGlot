@@ -6,6 +6,7 @@ import OpenAI from "openai"
 
 
 const handler = async (event) => {
+  const messages = JSON.parse(event.body)
   try {
     /*
     const response =  await openai.chat.completions.create({
@@ -15,7 +16,7 @@ const handler = async (event) => {
     }) */    return {
       statusCode: 200,
       body: JSON.stringify({
-        reply: event
+        reply: messages
       }),
     }
   } catch (error) {
