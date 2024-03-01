@@ -7,11 +7,12 @@ import OpenAI from "openai"
 
 const handler = async (event) => {
   try {
+    /*
     const response =  await openai.chat.completions.create({
       model: 'gpt-3.5-turbo-0125',
       messages: event.body,  
       temperature: 0.8
-    })
+    }) */
     return {
       statusCode: 200,
       body: JSON.stringify({
