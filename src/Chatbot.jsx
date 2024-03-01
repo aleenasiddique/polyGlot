@@ -51,9 +51,9 @@ export default function Chatbot(){
             //making API call to OpenAI to fetch translation
          
             const fetchTranslation = async  (userInputMessage) => {
-               /*
+            try {
                 setIsLoading(true)
-                setError(null) */
+                setError(null) 
              const url = 'https://poly-glot.netlify.app/.netlify/functions/fetchAI'
              const message = [...messages, userInputMessage]
              const response = await fetch(url, {
@@ -64,21 +64,22 @@ export default function Chatbot(){
              body: JSON.stringify(message) 
               })
               const data = await response.json() 
-              console.log(data)              /*
-                try {
-                   
+              console.log(data)         
+            
+            
                      
                    
-                   setConversationArray((prevConversation) => [...prevConversation, {type: 'bot', message: response.choices[0].message.content}])
-                const assistantContent = response.choices[0].message
-                     messages.push(assistantContent)  
+                   setConversationArray((prevConversation) => [...prevConversation, {type: 'bot', message: response.reply.choices[0].message.content}])
+                const assistantContent = response.reply.choices[0].message
+                     messages.push(assistantContent) 
+             
                     
-                } catch (error) {
+             } catch (error) {
                    
                     setError('Unable to access AI. Please try again')
                 }
                 setIsLoading(false)
-               */
+            
             }
             
 
