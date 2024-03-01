@@ -91,7 +91,7 @@ export default function Chatbot(){
     return (
       
         <div className="h-screen  w-screen flex justify-center items-center bg-zinc-100 ">
-        <main className="h-[610px] md:h-[650px] w-[90%] max-w-[400px] bg-white md:shadow-lg md:shadow-black/10 flex flex-col">
+        <main className="h-[590px] md:h-[650px] w-[90%] max-w-[400px] bg-white md:shadow-lg md:shadow-black/10 flex flex-col">
             <header className="w-full h-40 bg-cover flex justify-center items-center gap-4 px-2" style={{backgroundImage: `url(${mapBackground})`}}>
                   <img src={parrot} alt="parrot" className="h-[70%]"/>
                   <div className=" flex flex-col justify-center  md:gap-1">
@@ -102,7 +102,7 @@ export default function Chatbot(){
            <section className=" border-2 border-zinc-300 m-4 px-4 pt-6 pb-2 rounded-lg flex flex-col flex-1 ">
     
             <div ref={scrollRef}
-            className="h-[300px] md:h-[305px] overflow-y-auto mb-2 px-2">
+            className="h-[270px] md:h-[305px] overflow-y-auto mb-2 px-2">
                {Object.keys(conversationArray).length === 0  &&  <div className="p-2 rounded-lg bg-sky-600 text-white">
                 <p>Select the language you want me to translate into, type your text and hit send!</p>
                 </div> }
