@@ -1,13 +1,22 @@
-// Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
+import OpenAI from "openai"
+    
+  const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY
+      })  
+
+
 const handler = async (event) => {
   try {
-    const subject = event.queryStringParameters.name || 'World'
+    const response =  await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo-0125',
+      messages: event.body,  
+      temperature: 0.8
+    })
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: `Hello ${subject}` }),
-      // // more keys you can return:
-      // headers: { "headerName": "headerValue", ... },
-      // isBase64Encoded: true,
+      body: JSON.stringify({
+        reply: response.data
+      }),
     }
   } catch (error) {
     return { statusCode: 500, body: error.toString() }

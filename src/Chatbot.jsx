@@ -1,5 +1,4 @@
 import React from "react"
-import OpenAI from "openai"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowUp, faQuestion } from "@fortawesome/free-solid-svg-icons"
 import mapBackground from "./assets/map.png"
@@ -20,10 +19,7 @@ export default function Chatbot(){
     const scrollRef = React.useRef(null)
 
 
-     /*const openai = new OpenAI({
-        apiKey: process.env.OPENAI_API_KEY,
-        dangerouslyAllowBrowser: true 
-      })  */
+   
       // Open AI API messages array
       const messages =[{
         role: 'system',
@@ -70,11 +66,7 @@ export default function Chatbot(){
               const data = await response.json() 
               console.log(data)              /*
                 try {
-                   /const response =  await openai.chat.completions.create({
-                        model: 'gpt-3.5-turbo-0125',
-                        messages: [...messages, userInputMessage],  
-                        temperature: 0.8
-                      })
+                   
                      
                    
                    setConversationArray((prevConversation) => [...prevConversation, {type: 'bot', message: response.choices[0].message.content}])
