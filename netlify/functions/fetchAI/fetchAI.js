@@ -12,11 +12,10 @@ const handler = async (event) => {
       model: 'gpt-3.5-turbo-0125',
       messages: event.body,  
       temperature: 0.8
-    }) */
-    return {
+    }) */    return {
       statusCode: 200,
       body: JSON.stringify({
-        reply: event.body
+        reply: event
       }),
     }
   } catch (error) {
