@@ -142,7 +142,7 @@ export default function Chatbot(){
          autoComplete="off"
          />
          <button type="submit" name="submitButton"
-         className={`ml-[-1px] h-12 w-12 rounded-tr-lg rounded-br-lg text-white ${questionInput === '' ? " bg-zinc-300 " : " bg-sky-600 "}`} disabled={questionInput === ''}>
+         className={`ml-[-1px] h-14 w-14 rounded-tr-lg rounded-br-lg text-white ${questionInput === '' ? " bg-zinc-300 " : " bg-sky-600 "}`} disabled={questionInput === ''}>
          <FontAwesomeIcon icon={faArrowUp}/></button>
          </div>
             
