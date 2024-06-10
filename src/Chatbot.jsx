@@ -20,7 +20,7 @@ export default function Chatbot(){
 
 
    
-      // Open AI  messages array
+      // Open AI API  messages array
       const messages =[{
         role: 'system',
         content: `You are an expert language translator. You translate the text given in English properly to ${languageInput}`
