@@ -4,7 +4,7 @@ import OpenAI from "openai"
         apiKey: process.env.OPENAI_API_KEY
      
       })  
-   if(!apikey) {
+   if(!apiKey) {
     console.log("no key")
    }
 
