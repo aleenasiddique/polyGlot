@@ -2,10 +2,11 @@ import OpenAI from "openai"
     
   const openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY
-        if (!apiKey) {
-          console.error("API key is missing");
-      }
+     
       })  
+      if(!apiKey) {
+        console.error("API key is missing");
+    }
 
 
 const handler = async (event) => {
