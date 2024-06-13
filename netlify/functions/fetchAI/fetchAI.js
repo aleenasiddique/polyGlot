@@ -4,7 +4,9 @@ import OpenAI from "openai"
         apiKey: process.env.OPENAI_API_KEY
      
       })  
-   
+   if(!apikey) {
+    console.log("no key")
+   }
 
 
 const handler = async (event) => {
